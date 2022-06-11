@@ -2,6 +2,7 @@ const config = {};
 
 config.dev = {
 	name: "dev",
+	httpPort: 6969,
 	passwordLength: 2,
 	defaultLanguage: "en",
 	languages: ["en", "lt", "ee"],
@@ -14,6 +15,7 @@ config.dev = {
 
 config.prod = {
 	name: "prod",
+	httpPort: 42069,
 	passwordLength: 12,
 	defaultLanguage: "lt",
 	languages: ["en", "lt"],
@@ -31,4 +33,5 @@ const options = config[env] ? config[env] : config.dev;
 // console.log('kur dirba kodas?');
 // console.log('Ka parasiau terminale:', nodeEnv);
 // console.log('Kokia aplinka turesiu paleisti:', env);
-console.log(options);
+// console.log(options);
+export default options;
