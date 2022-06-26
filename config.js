@@ -29,10 +29,10 @@ config.prod = {
 		database: "batai-r5fe1d15",
 	},
 	cache: {
-		default: 60,
+		default: 60 * 60,
 		periods: {
 			css: 60 * 60,
-			js: 60 * 60 * 6,
+			js: 60 * 60,
 			svg: 60 * 60,
 			png: 60 * 60,
 			jpg: 60 * 60,
@@ -56,5 +56,5 @@ const options = config[env] ? config[env] : config.dev;
 // console.log('kur dirba kodas?');
 // console.log('Ka parasiau terminale:', nodeEnv);
 // console.log('Kokia aplinka turesiu paleisti:', env);
-// console.log(options);
+
 export default options;
